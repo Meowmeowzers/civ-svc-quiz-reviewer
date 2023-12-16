@@ -1,4 +1,5 @@
 import React from "react";
+import Choices from "./Choices";
 
 export default function FlashCards(props){
 	
@@ -12,10 +13,7 @@ export default function FlashCards(props){
 			<div>{score}</div>
 			<div>Question</div>
 			<div>
-				<div>Choice</div>
-				<div>Choice</div>
-				<div>Choice</div>
-				<div>Choice</div>
+				<Choices />
 			</div>
 			<div>
 				{didAnswer && <div>Next</div> }

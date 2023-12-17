@@ -1,5 +1,6 @@
 import React from "react";
 import Choices from "./Choices";
+import '../index.css';
 
 export default function FlashCards(props){
 	
@@ -9,15 +10,16 @@ export default function FlashCards(props){
 	let didAnswer = false;
 
 	return(
-		<>
-			<div>{score}</div>
-			<div>Question</div>
-			<div>
-				<Choices />
-			</div>
-			<div>
-				{didAnswer && <div>Next</div> }
-			</div>
-		</>
+		<div className="flash-cards-container">
+			<div className="flash-card-question">Insert very long question here</div>
+			<div className="flash-card-score">{score}</div>
+			<Choices />
+			
+			{didAnswer && 
+				<div className="question-finished-box">
+					<div className="question-finished-box-button">Next</div>
+				</div>
+			}
+		</div>
 	)
 }

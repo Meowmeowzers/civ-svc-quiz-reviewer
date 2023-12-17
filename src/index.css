@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,76 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.home-section{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: #44444477;
+}
+.about-section{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background-color: #44444488;
+}
+
+.flash-cards-container{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #44444477;
+  height: 100lvh;
+}
+.flash-card-question{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  height: 40vh;
+  width: 100%;
+}
+.flash-card-score{
+  font-weight: bold;
+}
+
+.choices{
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap:2px;
+  padding: 4px;
+  width: 100%;
+}
+.choices > li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	list-style-type: none;
+	padding: 24px;
+  background-color: #444;
+  height: 20vh;
+  width: 45vw;
+}
+
+.question-finished-box{
+  display: flex;
+  justify-self: flex-end;
+  justify-content: center;
+  background-color: #44444477;
+  padding: 8px;
+  min-height: 1px;
+  width: 100%;
+}
+.question-finished-box-button{
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid white;
+  width: 100px;
 }

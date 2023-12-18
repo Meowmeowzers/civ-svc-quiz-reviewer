@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home(){
 
@@ -6,7 +7,7 @@ export default function Home(){
 		<div>
 			<div className="home-section">
 				Home Page
-				<div>Start</div>
+				<Link to="/flashcards">Start</Link>
 			</div>
 			<div className="about-section">
 				About

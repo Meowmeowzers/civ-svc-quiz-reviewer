@@ -1,4 +1,4 @@
-const quizData = [
+const rightsQuizData = [
 	{
 		id: "0",
 		question: "question",

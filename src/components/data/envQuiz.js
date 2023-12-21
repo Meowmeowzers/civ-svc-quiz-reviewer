@@ -1,4 +1,4 @@
-const quizData = [
+const environmentQuizData = [
 	{
 		id: "0",
 		question: "question",

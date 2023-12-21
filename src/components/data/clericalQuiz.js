@@ -1,4 +1,4 @@
-const quizData = [
+const clericalQuizData = [
 	{
 		id: "0",
 		question: "question",

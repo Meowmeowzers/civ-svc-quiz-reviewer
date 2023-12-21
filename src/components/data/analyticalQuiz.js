@@ -1,4 +1,4 @@
-const quizData = [
+const analyticalQuizData = [
 	{
 		id: "0",
 		question: "question",

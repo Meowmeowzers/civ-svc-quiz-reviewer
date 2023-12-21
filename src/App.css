@@ -36,3 +36,137 @@
     transform: rotate(360deg);
   }
 }
+/* -------------------------------------------------------- */
+
+.home-section{
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: #44444477;
+}
+.home-title{
+  font-size: 60px;
+  font-weight: bold;
+  padding: 16px;
+}
+.home-start-button{
+  background-color: greenyellow;
+  padding:8px;
+}
+.home-start-button:hover{
+  cursor: pointer;
+}
+
+.about-section{
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: #44444488;
+}
+
+.about-section > h1{
+  padding-top:16px;
+}
+.about-section > p , .about-section > li, .about-section > h3{
+  justify-self: flex-start;
+  align-self: flex-start;
+  text-indent: 32px;
+}
+.about-section > p{
+  padding-top: 16px;
+}
+.about-section > h3{
+  padding-top: 16px;
+}
+
+.setup-container{
+  display:flex;
+  flex-flow: row rap;
+  justify-content: center;
+  width: 100%;
+}
+.setup-quiz{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  width: 40vw;
+  min-width: 200px;
+  max-width: 600px;
+  padding: 16px;
+  border:1px solid black;
+}
+
+.setup-quiz-type{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  border:1px solid black;
+}
+.setup-type-endless{}
+
+/* -------------------------------------------------------- */
+.flash-cards-container{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #44444477;
+  height: 100lvh;
+}
+.flash-card-question{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  height: 40vh;
+  width: 100%;
+}
+.flash-card-score{
+  font-weight: bold;
+}
+
+.choices{
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap:2px;
+  padding: 4px;
+  width: 100%;
+}
+.choices > li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	list-style-type: none;
+	padding: 24px;
+  background-color: #444;
+  height: 20vh;
+  width: 45vw;
+}
+
+.question-finished-box{
+  display: flex;
+  justify-self: flex-end;
+  justify-content: center;
+  background-color: #44444477;
+  padding: 8px;
+  min-height: 1px;
+  width: 100%;
+}
+.question-finished-box-button{
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid white;
+  width: 100px;
+}

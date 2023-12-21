@@ -1,4 +1,4 @@
-const quizData = [
+const conductQuizData = [
 	{
 		id: "0",
 		question: "question",

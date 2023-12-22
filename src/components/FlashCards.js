@@ -45,8 +45,6 @@ export default function FlashCards(props){
 		if(!didAnswer){
 			if(answeredIndex === currentQuestion.answer)
 				setScore(prev => prev + 1);
-			else
-				console.log(answeredIndex);
 			
 			setIndexQuestion(prev => {
 				if(prev + 1 >= flashCardsData.length)

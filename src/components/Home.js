@@ -1,26 +1,79 @@
 import React from "react";
 import SetUp from "./SetUp";
-// import { Link } from "react-router-dom";
+import dataAnalytical from "./data/analyticalQuiz"
+import dataClerical from "./data/clericalQuiz"
+import dataConduct from "./data/conductQuiz"
+import dataConstitution from "./data/constQuiz"
+import dataEnvironment from "./data/envQuiz"
+import dataNumerical from "./data/numQuiz"
+import dataRights from "./data/rightsQuiz"
+import dataVerbal from "./data/verbalQuiz"
+import {useNavigate} from "react-router-dom";
+import { SelectedItemsContext } from "../App";
 
 export default function Home(){
-
+	
+	const [/*selectedQuizItems*/, setSelectedQuizItems] = React.useContext(SelectedItemsContext);
 	const [isSetUp, setIsSetUp] = React.useState(false);
-
 	const [quizTypes, setQuizTypes] = React.useState({
 		numericalType: true,
-		verbalType: false,
-		clericalType: false,
-		analyticalType: false,
-		phConstitution: false,
-		conductEthics: false,
-		rights: false,
-		environment: false,
-		numberOfItems: 10
-	})
+		verbalType: true,
+		clericalType: true,
+		analyticalType: true,
+		phConstitution: true,
+		conductEthics: true,
+		rights: true,
+		environment: true,
+		numberOfItems: 40,
+		type: "review"
+	});
 
-	// function handleClickStart(){
-	// 	setIsSetUp(() => !isSetUp);
-	// }
+	const navigate = useNavigate();
+	
+	function handleChange(e){
+		const {name, type, value, checked} = e.target
+
+		setQuizTypes(prev => {
+			return{
+				...prev,
+				[name]: type === "checkbox" ? checked: value
+			}			
+		});
+		console.log(quizTypes);
+	}
+
+	function startReview(){
+		setQuizTypes({...quizTypes, type: "review"})
+		setSelectedQuizItems(() => {			
+			const selectedItems = [
+				quizTypes.numericalType && dataNumerical,
+				quizTypes.verbalType && dataVerbal,
+				quizTypes.clericalType && dataClerical,
+				quizTypes.analyticalType && dataAnalytical,
+				quizTypes.phConstitution && dataConstitution,
+				quizTypes.conductEthics && dataConduct,
+				quizTypes.rights && dataRights,
+				quizTypes.environment && dataEnvironment,
+			  ].filter(Boolean).flat(); // flat is used to remove array nesting???
+
+			shuffleArray(selectedItems);
+
+			return selectedItems;
+		});
+		navigate("/flashcards");
+	}
+
+	// function startQuiz(){}
+	
+	function shuffleArray(array) {
+		//fisher yates algorithm
+		let newArray = array;
+		for (let i = newArray.length - 1; i > 0; i--) {
+		  const j = Math.floor(Math.random() * (i + 1));
+		  [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+		}
+		return newArray;
+	  }
 
 	return(
 		<div>
@@ -32,7 +85,12 @@ export default function Home(){
 					</>
 				}
 				{/* <Link to="/flashcards">Start</Link> */}
-				{isSetUp && <SetUp data={quizTypes}/>}
+				{isSetUp && 
+					<SetUp 
+						data={quizTypes}
+						handleChange={handleChange}
+						handleStartEndless={startReview} 
+					/>}
 			</div>
 
 			<div className="about-section">
@@ -117,7 +175,7 @@ export default function Home(){
 				<li>Professional-level examinees need to answer 170 items within 3 hours and 10 minutes, while sub-professional-level examinees have 2 hours and 40 minutes to answer a total of 165 items.</li>
 				<li>Examinees should get a rating of at least 80 to pass. </li>
 
-				<a href="#">Read More</a>
+				<a href="google.com">Read More</a>
 			</div>
 		</div>
 	)

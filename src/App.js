@@ -3,33 +3,23 @@ import './App.css';
 import React from 'react';
 import Home from './components/Home';
 import FlashCards from './components/FlashCards';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
+export const SelectedItemsContext = React.createContext();
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path='/flashcards' element={<FlashCards />}/>
-    </Routes>
 
-    // {/* <div className="App"> */}
-    //  {/* <Home /> */}
-    //  {/* <FlashCards /> */}
-    //   {/* <header className="App-header"> */}
-    //     {/* <img src={logo} className="App-logo" alt="logo" /> */}
-    //     {/* <p> */}
-    //       {/* Edit <code>src/App.js</code> and save to reload. */}
-    //     {/* </p> */}
-    //     {/* <a */}
-    //       // className="App-link"
-    //       // href="https://reactjs.org"
-    //       // target="_blank"
-    //       // rel="noopener noreferrer"
-    //     // >
-    //       {/* Learn React */}
-    //     {/* </a> */}
-    //   {/* </header> */}
-    // {/* </div> */}
+  const [selectedQuizItems, setSelectedQuizItems] = React.useState([{}]);
+
+  return (
+     <BrowserRouter>
+     <SelectedItemsContext.Provider value={[selectedQuizItems, setSelectedQuizItems]}>  
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path='/flashcards' element={<FlashCards />}/>
+      </Routes>
+    </SelectedItemsContext.Provider>
+    </BrowserRouter>
   );
 }
 

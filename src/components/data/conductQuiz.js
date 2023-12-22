@@ -1,7 +1,18 @@
 const conductQuizData = [
 	{
-		id: "0",
-		question: "question",
+		id: "13001",
+		question: "question conduct",
+		answer: "answer",
+		choices: [
+			"choice 1x",
+			"choice 2y",
+			"choice 3z",
+			"choice 4a"
+		]
+	},
+	{
+		id: "13002",
+		question: "question conduct",
 		answer: "answer",
 		choices: [
 			"choice 1x",
@@ -12,4 +23,4 @@ const conductQuizData = [
 	}
 ]
 
-export default quizData;
+export default conductQuizData;

@@ -1,27 +1,89 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Choices from "./Choices";
 import '../index.css';
-import quizData from "./quizData";
+// import quizData from "./quizData";
+import { SelectedItemsContext } from "../App";
 
 export default function FlashCards(props){
 	
+	const [flashCardsData, /*setFlashCardsData*/] = React.useContext(SelectedItemsContext);
+	const [currentQuestion, setCurrentQuestion] = React.useState({
+		question: "",
+		answer: "",
+		choices: [
+			"","","",""
+		]
+	});
 	const [score, setScore] = React.useState(0);
-	const [flashCardsData, setFlashCardsData] = React.useState(quizData);
-	// const [questionData, setQuestionData] = React.useState({});
+	const [currentIndex, setIndexQuestion] = React.useState(0);
+	const [didAnswer, setDidAnswer] = React.useState(false);
 
-	let didAnswer = false;
+	useEffect(() => {
+		setCurrentQuestionData(flashCardsData[currentIndex].choices);
+		console.log("OnMount");
+	}, []);
+
+	function setCurrentQuestionData(choicesArray){
+		const randomAnswerIndex = Math.floor(Math.random() * 4);
+		const newChoices = [...choicesArray];
+		
+		for (let i = newChoices.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[newChoices[i], newChoices[j]] = [newChoices[j], newChoices[i]];
+		}
+		
+		newChoices[randomAnswerIndex] = flashCardsData[currentIndex].answer;
+
+		setCurrentQuestion(() => {
+			return {
+				question: flashCardsData[currentIndex].question,
+				answer: randomAnswerIndex,
+				choices : newChoices
+			}
+		});
+		return newChoices;
+	}
+
+	function handleAnswerClick(answeredIndex){
+		if(!didAnswer){
+			if(answeredIndex === currentQuestion.answer){
+				console.log("correct answer");
+				setScore(prev => prev + 1);
+			}
+			else{
+				console.log(answeredIndex);
+				setIndexQuestion(prev => prev + 1);
+			}
+		}
+		setDidAnswer(true);
+	}
+
+	function handleNextQuestion(){
+		setDidAnswer(false);
+		setCurrentQuestionData(flashCardsData[currentIndex].choices);
+	}
 
 	return(
 		<div className="flash-cards-container">
-			<div className="flash-card-question">{flashCardsData[0].question}</div>
-			<div className="flash-card-score">{score}</div>
-			<Choices choices={flashCardsData[0].choices} answer={flashCardsData[0].answer}/>
-			
-			{didAnswer && 
-				<div className="question-finished-box">
-					<div className="question-finished-box-button">Next</div>
-				</div>
-			}
+			<>
+				<div className="flash-card-question">{flashCardsData[currentIndex].question}</div>
+				<div className="flash-card-score">{score}</div>
+				<ul className="choices">
+					<li onClick={() => handleAnswerClick(0)}>{currentQuestion.choices[0]}</li>
+					<li onClick={() => handleAnswerClick(1)}>{currentQuestion.choices[1]}</li>
+					<li onClick={() => handleAnswerClick(2)}>{currentQuestion.choices[2]}</li>
+					<li onClick={() => handleAnswerClick(3)}>{currentQuestion.choices[3]}</li>
+				</ul>
+				{didAnswer && 
+					<div className="question-finished-box">
+						<div 
+							onClick={handleNextQuestion}
+							className="question-finished-box-button">
+							Next
+						</div>
+					</div>
+				}
+			</>
 		</div>
 	)
 }

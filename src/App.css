@@ -129,9 +129,14 @@
   padding: 8px;
   height: 40vh;
   width: 100%;
+  border: 1px solid pink;
 }
 .flash-card-score{
+  display: flex;
+  justify-content: center;
   font-weight: bold;
+  border: 1px solid pink;
+  width: 100%;
 }
 
 .choices{
@@ -141,6 +146,8 @@
   justify-content: center;
   gap:2px;
   padding: 4px;
+  border: 1px solid yellow;
+  height: 40vh;
   width: 100%;
 }
 .choices > li{

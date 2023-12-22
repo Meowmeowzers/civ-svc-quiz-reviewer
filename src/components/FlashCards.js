@@ -20,7 +20,6 @@ export default function FlashCards(props){
 
 	useEffect(() => {
 		setCurrentQuestionData(flashCardsData[currentIndex].choices);
-		console.log("OnMount");
 	}, []);
 
 	function setCurrentQuestionData(choicesArray){
@@ -52,10 +51,17 @@ export default function FlashCards(props){
 			}
 			else{
 				console.log(answeredIndex);
-				setIndexQuestion(prev => prev + 1);
 			}
+			
+			setIndexQuestion(prev => {
+				if(prev + 1 >= flashCardsData.length)
+					return 0;
+				else{
+					return prev + 1;
+				}
+			});
+			setDidAnswer(true);
 		}
-		setDidAnswer(true);
 	}
 
 	function handleNextQuestion(){

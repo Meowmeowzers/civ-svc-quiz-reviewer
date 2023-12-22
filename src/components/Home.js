@@ -17,13 +17,13 @@ export default function Home(){
 	const [isSetUp, setIsSetUp] = React.useState(false);
 	const [quizTypes, setQuizTypes] = React.useState({
 		numericalType: true,
-		verbalType: true,
-		clericalType: true,
-		analyticalType: true,
-		phConstitution: true,
-		conductEthics: true,
-		rights: true,
-		environment: true,
+		verbalType: false,
+		clericalType: false,
+		analyticalType: false,
+		phConstitution: false,
+		conductEthics: false,
+		rights: false,
+		environment: false,
 		numberOfItems: 40,
 		type: "review"
 	});

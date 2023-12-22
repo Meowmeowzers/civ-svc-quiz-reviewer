@@ -3,7 +3,6 @@ import React from "react";
 export default function SetUp(props){
 	return(
 		<div className="setup-section">
-			<div className="setup-window-container">
 				<div className="setup-quiz">
 						<h1>Select Categories</h1>
 						<label htmlFor="numericalType">
@@ -102,7 +101,7 @@ export default function SetUp(props){
 					{/* <label>Number of Questions</label> */}
 					{props.data.numberOfItems < 10 ? <p>Review Mode</p> : <p>{`${props.data.numberOfItems} items`}</p>}
 				</div>
-			</div>
+			
 		</div>
 	)
 }

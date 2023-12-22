@@ -80,8 +80,8 @@ export default function Home(){
 			<div className="home-section">
 				{!isSetUp &&
 					<>
-						<div className="home-title"><p>My Civil Service</p> Exam Reviewer</div>
-						<div className="home-start-button" onClick={() => setIsSetUp(() => !isSetUp)}>Start</div>
+						<div className="home-title"><p>My <span>CIVIL SERVICE</span></p>Exam Reviewer</div>
+						<div className="home-start-button" onClick={() => setIsSetUp(() => !isSetUp)}>Click Here</div>
 					</>
 				}
 				{/* <Link to="/flashcards">Start</Link> */}
@@ -102,8 +102,7 @@ export default function Home(){
 					<li>Professional</li>
 					<li>Sub-Professional</li>
 					
-					<p>Passers of the exam for professional civil service level may be accepted for both clerical (first-level) and technical, executive, or managerial (second-level) positions in the government.
-					On the other hand, passers of the exam for the sub-professional civil service level may be accepted only for first-level or clerical government positions.</p>
+					<p>Passers of the exam for professional civil service level may be accepted for both clerical (first-level) and technical, executive, or managerial (second-level) positions in the government.	On the other hand, passers of the exam for the sub-professional civil service level may be accepted only for first-level or clerical government positions.</p>
 
 					<h1>Modes of Civil Service Exam</h1>
 					<p>You can take the exam through the manual pen-and-paper test (PPT) or the computerized examination (COMEX).
@@ -118,10 +117,6 @@ export default function Home(){
 					<li>Peace and Human Rights Issues and Concepts </li>
 					<li>Environment Management and Protection</li>
 
-					<h3>Clerical Ability</h3>
-					<li>Filing</li>
-					<li>Spelling</li>
-
 					<h3>Numerical Ability</h3>
 					<li>Basic operations</li>
 					<li>Word problems</li>
@@ -131,10 +126,12 @@ export default function Home(){
 					<li>Vocabulary</li>
 					<li>Paragraph organization</li>
 					<li>Reading comprehension</li>
+					
+					<h3>Clerical Ability (Sub-professional)</h3>
+					<li>Filing</li>
+					<li>Spelling</li>
 
-					<p>The exam coverage also includes the following for the professional level: </p>
-
-					<h3>Analytical Ability</h3>
+					<h3>Analytical Ability (Professional)</h3>
 					<li>Word association </li>
 					<li>Identifying assumptions and conclusions</li>
 					<li>Logic </li>
@@ -149,8 +146,7 @@ export default function Home(){
 					<li>No conviction of an offense or crime</li>
 					<li>No dismissal from military or government service</li>
 					<li>Has never taken the same level of civil service within three months before the examination date</li>
-					
-					<p>Can undergraduates apply for the civil service exam? Yes. Since the CSC has no educational requirement for CSE applicants, a high school graduate or a college undergraduate can take the civil service exam.</p>
+					<li>A high school graduate or a college undergraduate can take the civil service exam.</li>
 
 					<h1>Who is Exempted from Taking the Exam?</h1>
 					<p>Not all Filipinos who want to work in the government must take the civil service exam. The CSC grants exemption to the following individuals who are already considered eligible for civil service:</p>
@@ -172,13 +168,17 @@ export default function Home(){
 					<li>Professional-level examinees need to answer 170 items within 3 hours and 10 minutes</li>
 					<li>Sub-professional-level examinees have 2 hours and 40 minutes to answer a total of 165 items.</li>
 					<li>Examinees should get a rating of at least 80 to pass. </li>
-
-					<a href="google.com" target="__blank">Read More</a>
+					
+					<a href="https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2023/ExamAnnouncement05s2023_Conduct%20of%202024-0303%20CSE-PPT.pdf" target="__blank">Read More</a>
 					
 					<h1>Why this Website?</h1>
 					<li>This simple project served as a learning activity for learning vanilla ReactJS.</li>				
+
+					<h1>Disclaimer</h1>
+					<li>Insert comment.</li>				
 				</div>
 			</div>
+			<footer></footer>
 		</div>
 	)
 }

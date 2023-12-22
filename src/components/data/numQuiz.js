@@ -1,24 +1,24 @@
 const numericalQuizData = [
 	{
 		id: "16002",
-		question: "question num",
-		answer: "answer",
+		question: "(2×1÷2), (4÷1×2), (6×1÷2), _____",
+		answer: "16",
 		choices: [
-			"choice 1x",
-			"choice 2y",
-			"choice 3z",
-			"choice 4a"
+			"8",
+			"12",
+			"4",
+			"32"
 		]
 	},
 	{
 		id: "16002",
-		question: "question num",
-		answer: "answer",
+		question: "(15-8+3), 8, (4÷2×3), ____",
+		answer: "4",
 		choices: [
-			"choice 1x",
-			"choice 2y",
-			"choice 3z",
-			"choice 4a"
+			"4",
+			"3",
+			"8",
+			"2"
 		]
 	}
 ]

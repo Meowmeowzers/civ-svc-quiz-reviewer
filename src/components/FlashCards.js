@@ -63,25 +63,29 @@ export default function FlashCards(props){
 
 	return(
 		<div className="flash-cards-container">
-			<>
-				<div className="flash-card-question">{flashCardsData[currentIndex].question}</div>
-				<div className="flash-card-score">{score}</div>
+			<div className="flash-card-score">
+				<p>score: {score}</p>
+			</div>
+			<div className="flash-card-main-content">
+				<div className="flash-card-question">
+					{flashCardsData[currentIndex].question}
+				</div>
 				<ul className="choices">
 					<li onClick={() => handleAnswerClick(0)}>{currentQuestion.choices[0]}</li>
 					<li onClick={() => handleAnswerClick(1)}>{currentQuestion.choices[1]}</li>
 					<li onClick={() => handleAnswerClick(2)}>{currentQuestion.choices[2]}</li>
 					<li onClick={() => handleAnswerClick(3)}>{currentQuestion.choices[3]}</li>
 				</ul>
-				{didAnswer && 
-					<div className="question-finished-box">
-						<div 
-							onClick={handleNextQuestion}
-							className="question-finished-box-button">
-							Next
-						</div>
+			</div>
+			{didAnswer && 
+				<div className="question-finished-box">
+					<div 
+						onClick={handleNextQuestion}
+						className="question-finished-box-button">
+						Next
 					</div>
-				}
-			</>
+				</div>
+			}
 		</div>
 	)
 }

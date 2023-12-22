@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-import Choices from "./Choices";
 import '../index.css';
-// import quizData from "./quizData";
 import { SelectedItemsContext } from "../App";
 
 export default function FlashCards(props){
@@ -45,20 +43,16 @@ export default function FlashCards(props){
 
 	function handleAnswerClick(answeredIndex){
 		if(!didAnswer){
-			if(answeredIndex === currentQuestion.answer){
-				console.log("correct answer");
+			if(answeredIndex === currentQuestion.answer)
 				setScore(prev => prev + 1);
-			}
-			else{
+			else
 				console.log(answeredIndex);
-			}
 			
 			setIndexQuestion(prev => {
 				if(prev + 1 >= flashCardsData.length)
 					return 0;
-				else{
+				else
 					return prev + 1;
-				}
 			});
 			setDidAnswer(true);
 		}

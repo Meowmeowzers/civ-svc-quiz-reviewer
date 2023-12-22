@@ -43,17 +43,30 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  background-color: hsl(135, 100%, 76%);
   height: 90vh;
-  background-color: #44444477;
+  color: #333;
 }
 .home-title{
-  font-size: 60px;
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 16px; 
+  font-size: 64px;
   font-weight: bold;
-  padding: 16px;
+  background-color: hsl(138, 100%, 76%);
+  height: 300px;
+  width: 80vw;
 }
 .home-start-button{
+  display: flex;
+  justify-content: center;
   background-color: greenyellow;
+  border-radius: 12px;
   padding:8px;
+  font-size: 24px;
+  font-weight: bold;
+  width: 200px;
 }
 .home-start-button:hover{
   cursor: pointer;
@@ -65,7 +78,8 @@
   align-items: center;
   justify-content: center;
   padding: 16px;
-  background-color: #44444488;
+  background-color: hsl(135, 10%, 30%);
+  color: #eee;
 }
 
 .about-section > h1{
@@ -82,7 +96,13 @@
 .about-section > h3{
   padding-top: 16px;
 }
-
+.about-section > a{
+  padding: 12px;
+  color:#61dafb;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
 .setup-container{
   display:flex;
   flex-flow: row rap;
@@ -119,7 +139,7 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: #44444477;
+  background-color: hsl(135, 100%, 76%);
   height: 100lvh;
 }
 .flash-card-question{
@@ -129,13 +149,14 @@
   padding: 8px;
   height: 40vh;
   width: 100%;
-  border: 1px solid pink;
+  font-size: 28px;
+  font-weight: bold;
 }
 .flash-card-score{
   display: flex;
   justify-content: center;
+  font-size: 24px;
   font-weight: bold;
-  border: 1px solid pink;
   width: 100%;
 }
 
@@ -143,10 +164,9 @@
   display:flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
-  gap:2px;
+  justify-content: space-evenly;
+  gap: 16px;
   padding: 4px;
-  border: 1px solid yellow;
   height: 40vh;
   width: 100%;
 }
@@ -155,25 +175,28 @@
   align-items: center;
   justify-content: center;
 	list-style-type: none;
-	padding: 24px;
-  background-color: #444;
-  height: 20vh;
-  width: 45vw;
+	padding: 20px;
+  background-color: hsl(205, 50%, 60%);
+  box-shadow: 2px 2px black;
+  border-radius: 8px;
+  font-size: 18px;
+  height: 100px;
+  width: 40vw;
 }
 
 .question-finished-box{
   display: flex;
   justify-self: flex-end;
   justify-content: center;
-  background-color: #44444477;
+  background-color: hsl(0, 0%, 20%);
   padding: 8px;
-  min-height: 1px;
   width: 100%;
 }
 .question-finished-box-button{
   display: flex;
   justify-content: center;
   padding: 8px;
+  background-color: hsl(135, 100%, 76%);
   border: 1px solid white;
   width: 100px;
 }

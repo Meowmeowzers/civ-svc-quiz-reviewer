@@ -80,7 +80,7 @@ export default function Home(){
 			<div className="home-section">
 				{!isSetUp &&
 					<>
-						<div className="home-title">Home Page</div>
+						<div className="home-title"><p>My Civil Service</p> Exam Reviewer</div>
 						<div className="home-start-button" onClick={() => setIsSetUp(() => !isSetUp)}>Start</div>
 					</>
 				}

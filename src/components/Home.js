@@ -1,5 +1,7 @@
 import React from "react";
 import SetUp from "./SetUp";
+import { useNavigate } from "react-router-dom";
+import { SelectedItemsContext } from "../App";
 import dataAnalytical from "./data/analyticalQuiz"
 import dataClerical from "./data/clericalQuiz"
 import dataConduct from "./data/conductQuiz"
@@ -8,8 +10,6 @@ import dataEnvironment from "./data/envQuiz"
 import dataNumerical from "./data/numQuiz"
 import dataRights from "./data/rightsQuiz"
 import dataVerbal from "./data/verbalQuiz"
-import {useNavigate} from "react-router-dom";
-import { SelectedItemsContext } from "../App";
 
 export default function Home(){
 	
@@ -63,8 +63,6 @@ export default function Home(){
 		navigate("/review");
 	}
 
-	// function startQuiz(){}
-	
 	function shuffleArray(array) {
 		//fisher yates algorithm
 		let newArray = array;

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import '../index.css';
 import { SelectedItemsContext } from "../App";
 
@@ -16,7 +16,7 @@ export default function FlashCards(){
 	const [currentIndex, setCurrentIndex] = React.useState(0);
 	const [didAnswer, setDidAnswer] = React.useState(false);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		setCurrentQuestionData(flashCardsData[currentIndex].choices);
 	}, []);
 

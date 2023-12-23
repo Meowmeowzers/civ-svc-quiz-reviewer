@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import '../index.css';
 import { SelectedItemsContext } from "../App";
 
-export default function FlashCards(props){
+export default function FlashCards(){
 	
 	const [flashCardsData, /*setFlashCardsData*/] = React.useContext(SelectedItemsContext);
 	const [currentQuestion, setCurrentQuestion] = React.useState({
@@ -53,8 +53,7 @@ export default function FlashCards(props){
 					return 0;
 				else
 					return prev + 1;
-			});
-			
+			});	
 		}
 	}
 

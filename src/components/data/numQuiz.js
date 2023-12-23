@@ -1,6 +1,6 @@
 const numericalQuizData = [
 	{
-		id: "16002",
+		id: 16001,
 		question: "(2×1÷2), (4÷1×2), (6×1÷2), _____",
 		answer: "16",
 		choices: [
@@ -11,7 +11,7 @@ const numericalQuizData = [
 		]
 	},
 	{
-		id: "16002",
+		id: 16002,
 		question: "(15-8+3), 8, (4÷2×3), ____",
 		answer: "4",
 		choices: [

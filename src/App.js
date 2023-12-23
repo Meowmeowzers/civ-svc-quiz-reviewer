@@ -16,7 +16,7 @@ function App() {
      <SelectedItemsContext.Provider value={[selectedQuizItems, setSelectedQuizItems]}>  
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path='/flashcards' element={<FlashCards />}/>
+        <Route path='/review' element={<FlashCards />}/>
       </Routes>
     </SelectedItemsContext.Provider>
     </BrowserRouter>

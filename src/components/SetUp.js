@@ -87,7 +87,7 @@ export default function SetUp(props){
 						</label>
 				</div>
 				<div className="setup-quiz-type">
-					<button className="setup-quiz-start-button" onClick={props.handleStartEndless}>Start</button>			
+					<button className="setup-quiz-start-button" onClick={props.handleStartReview}>Start</button>			
 					<input 
 						id="numberOfItems" 
 						name="numberOfItems" 

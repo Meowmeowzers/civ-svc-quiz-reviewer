@@ -1,6 +1,6 @@
 const conductQuizData = [
 	{
-		id: "13001",
+		id: 13001,
 		question: "question conduct",
 		answer: "answer",
 		choices: [
@@ -11,7 +11,7 @@ const conductQuizData = [
 		]
 	},
 	{
-		id: "13002",
+		id: 13002,
 		question: "question conduct",
 		answer: "answer",
 		choices: [

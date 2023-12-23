@@ -1,6 +1,6 @@
 const constitutionQuizData = [
 	{
-		id: "14001",
+		id: 14001,
 		question: "question const",
 		answer: "answer",
 		choices: [
@@ -11,7 +11,7 @@ const constitutionQuizData = [
 		]
 	},
 	{
-		id: "14002",
+		id: 14002,
 		question: "question const",
 		answer: "answer",
 		choices: [

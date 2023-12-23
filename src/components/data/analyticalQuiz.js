@@ -1,6 +1,6 @@
 const analyticalQuizData = [
 	{
-		id: "11001",
+		id: 11001,
 		question: "question a",
 		answer: "answer",
 		choices: [
@@ -11,7 +11,7 @@ const analyticalQuizData = [
 		]
 	},
 	{
-		id: "11002",
+		id: 11002,
 		question: "question a",
 		answer: "answer",
 		choices: [

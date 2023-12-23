@@ -1,6 +1,6 @@
 const verbalQuizData = [
 	{
-		id: "18001",
+		id: 18001,
 		question: "question v",
 		answer: "answer",
 		choices: [
@@ -11,7 +11,7 @@ const verbalQuizData = [
 		]
 	},
 	{
-		id: "18002",
+		id: 18002,
 		question: "question v",
 		answer: "answer",
 		choices: [

@@ -1,6 +1,6 @@
 const rightsQuizData = [
 	{
-		id: "17001",
+		id: 17001,
 		question: "question right",
 		answer: "answer",
 		choices: [
@@ -11,7 +11,7 @@ const rightsQuizData = [
 		]
 	},
 	{
-		id: "17002",
+		id: 17002,
 		question: "question right",
 		answer: "answer",
 		choices: [

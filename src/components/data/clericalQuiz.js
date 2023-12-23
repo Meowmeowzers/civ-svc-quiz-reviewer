@@ -1,6 +1,6 @@
 const clericalQuizData = [
 	{
-		id: "12001",
+		id: 12001,
 		question: "question c",
 		answer: "answer",
 		choices: [
@@ -11,7 +11,7 @@ const clericalQuizData = [
 		]
 	},
 	{
-		id: "12002",
+		id: 12002,
 		question: "question c",
 		answer: "answer",
 		choices: [

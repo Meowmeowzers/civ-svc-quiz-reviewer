@@ -1,6 +1,6 @@
 const environmentQuizData = [
 	{
-		id: "15001",
+		id: 15001,
 		question: "question env",
 		answer: "answer",
 		choices: [
@@ -11,7 +11,7 @@ const environmentQuizData = [
 		]
 	},
 	{
-		id: "15002",
+		id: 15002,
 		question: "question env",
 		answer: "answer",
 		choices: [

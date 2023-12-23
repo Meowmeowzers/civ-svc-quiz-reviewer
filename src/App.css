@@ -240,11 +240,15 @@
 	list-style-type: none;
 	padding: 20px;
   background-color: hsl(205, 50%, 60%);
-  box-shadow: 2px 2px #333;
   border-radius: 8px;
   font-size: 18px;
+  font-weight: bold;
   height: 100px;
   width: 90%;
+}
+.choices > li:hover{
+  cursor: pointer;
+  background-color: hsl(187, 50%, 60%);
 }
 
 .question-finished-box{
@@ -260,7 +264,13 @@
   display: flex;
   justify-content: center;
   padding: 8px;
-  background-color: hsl(135, 100%, 76%);
-  border: 1px solid white;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
   width: 100px;
+}
+.question-finished-box-button:hover{
+  cursor: pointer;
+  background-color: hsl(135, 100%, 76%);
 }

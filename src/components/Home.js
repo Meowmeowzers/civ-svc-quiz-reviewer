@@ -60,7 +60,7 @@ export default function Home(){
 
 			return selectedItems;
 		});
-		navigate("/flashcards");
+		navigate("/review");
 	}
 
 	// function startQuiz(){}
@@ -84,12 +84,11 @@ export default function Home(){
 						<div className="home-start-button" onClick={() => setIsSetUp(() => !isSetUp)}>Click Here</div>
 					</>
 				}
-				{/* <Link to="/flashcards">Start</Link> */}
 				{isSetUp && 
 					<SetUp 
 						data={quizTypes}
 						handleChange={handleChange}
-						handleStartEndless={startReview} 
+						handleStartReview={startReview} 
 					/>}
 			</div>
 

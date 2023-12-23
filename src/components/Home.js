@@ -92,8 +92,8 @@ export default function Home(){
 
 			<div className="about-section">
 				<div className="about-container">
-					<h1>What is the Civil Service Exam in the Philippines</h1>
-					<p>The career service examination is the government’s way of screening and selecting prospective civil servants in the country. The Civil Service Commission (CSC) creates and administers this exam to determine which applicants are fit for a government job.</p>
+					<h1>What is the Philippine Civil Service Exam</h1>
+					<p>The civil service examination is the government’s way of screening and selecting prospective civil servants in the country. The Civil Service Commission (CSC) creates and administers this exam to determine which applicants are fit for a government job.</p>
 					
 					<h1>Types of Civil Service Exams</h1>
 					<li>Professional</li>

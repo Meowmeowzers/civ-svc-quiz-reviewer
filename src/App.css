@@ -195,7 +195,7 @@
 }
 .flash-card-score{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-self: flex-start;
   align-items: center;
   border: 1px solid black;
@@ -204,6 +204,7 @@
   font-size: 24px;
   font-weight: bold;
   width: 100%;
+  padding: 0 8px;
 }
 .flash-card-main-content{
   display: flex;
@@ -239,7 +240,7 @@
   justify-content: center;
 	list-style-type: none;
 	padding: 20px;
-  background-color: hsl(205, 50%, 60%);
+  background-color: hsl(187, 70%, 60%);
   border-radius: 8px;
   font-size: 18px;
   font-weight: bold;
@@ -247,8 +248,8 @@
   width: 90%;
 }
 .choices > li:hover{
+  background-color: hsl(205, 70%, 60%);
   cursor: pointer;
-  background-color: hsl(187, 50%, 60%);
 }
 
 .question-finished-box{
@@ -258,6 +259,7 @@
   justify-content: center;
   background-color: hsl(0, 0%, 20%);
   padding: 8px;
+  min-height: 60px;
   width: 100%;
 }
 .question-finished-box-button{

@@ -12,9 +12,23 @@ export default function FlashCards(){
 			"","","",""
 		]
 	});
-	const [score, setScore] = React.useState(0);
+	const [type, setType] = React.useState("review");
+ 	const [score, setScore] = React.useState(0);
 	const [currentIndex, setCurrentIndex] = React.useState(0);
 	const [didAnswer, setDidAnswer] = React.useState(false);
+	const [selectedAnswer, setSelectedAnswer] = React.useState(0);
+
+	const styleSelectedCorrect = {
+		border: "4px solid #eee",
+		backgroundColor: "transparent"
+	}
+	const styleSelected = {
+		border: "2px solid #444",
+	}
+	const styleAnswer = {
+		border: "4px solid #eee",
+		backgroundColor: "transparent"
+	}
 
 	React.useEffect(() => {
 		setCurrentQuestionData(flashCardsData[currentIndex].choices);
@@ -44,7 +58,8 @@ export default function FlashCards(){
 	function handleAnswerClick(answeredIndex){
 		if(!didAnswer){
 			setDidAnswer(true);
-			
+			setSelectedAnswer(answeredIndex);
+
 			if(answeredIndex === currentQuestion.answer)
 				setScore(prev => prev + 1);
 			
@@ -65,28 +80,43 @@ export default function FlashCards(){
 	return(
 		<div className="flash-cards-container">
 			<div className="flash-card-score">
+				<p>{type}</p>
 				<p>score: {score}</p>
+				<p>TIME: 00:00:00</p>
 			</div>
 			<div className="flash-card-main-content">
 				<div className="flash-card-question">
 					{currentQuestion.question}
 				</div>
 				<ul className="choices">
-					<li onClick={() => handleAnswerClick(0)}>{currentQuestion.choices[0]}</li>
-					<li onClick={() => handleAnswerClick(1)}>{currentQuestion.choices[1]}</li>
-					<li onClick={() => handleAnswerClick(2)}>{currentQuestion.choices[2]}</li>
-					<li onClick={() => handleAnswerClick(3)}>{currentQuestion.choices[3]}</li>
+					{currentQuestion.choices.slice(0, 4).map((choice, index) => (
+						didAnswer && index === selectedAnswer && index === currentQuestion.answer ?
+							<li key={index} onClick={() => handleAnswerClick(index)} style={styleSelectedCorrect}>
+								{choice}
+							</li>
+						: didAnswer && index === selectedAnswer ?
+							<li key={index} onClick={() => handleAnswerClick(index)} style={styleSelected}>
+								{choice}
+							</li>
+						:	didAnswer && index === currentQuestion.answer ?
+							<li key={index} onClick={() => handleAnswerClick(index)} style={styleAnswer}>
+								{choice}
+							</li>
+						: 	<li key={index} onClick={() => handleAnswerClick(index)}>
+								{choice}
+							</li>
+					))}
 				</ul>
 			</div>
-			{didAnswer && 
-				<div className="question-finished-box">
+			<div className="question-finished-box">
+				{didAnswer && 
 					<div 
 						onClick={handleNextQuestion}
 						className="question-finished-box-button">
 						Next
 					</div>
-				</div>
-			}
+				}
+			</div>
 		</div>
 	)
 }

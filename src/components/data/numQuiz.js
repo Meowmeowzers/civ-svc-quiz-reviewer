@@ -23,7 +23,7 @@ const numericalQuizData = [
 	},
 	{
 		id: 16003,
-		question: "Simplify:\n33 1/3 % of 48 + 12 ½ % of 96 - 44 4/9 % of 27",
+		question: "Simplify: 33 1/3 % of 48 + 12 1/2 % of 96 - 44 4/9 % of 27",
 		answer: "16",
 		choices: [
 			"12",
@@ -105,7 +105,7 @@ const numericalQuizData = [
 	},
 	{
 		id: 16010,
-		question: "990 - (-2)2 + (32) - (-4)2 = ?",
+		question: "99^0 - (-2)^2 + (3^2) - (-4)^2 = ?",
 		answer: "-28",
 		choices: [
 			"-30",
@@ -117,7 +117,7 @@ const numericalQuizData = [
 	},
 	{
 		id: 16011,
-		question: " (100)0 + (-42) - 22 = ?",
+		question: " (100)^0 + (-4^2) - 2^2 = ?",
 		answer: "-19",
 		choices: [
 			"19",

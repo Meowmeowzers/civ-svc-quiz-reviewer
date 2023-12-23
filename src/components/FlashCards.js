@@ -9,9 +9,7 @@ export default function FlashCards(){
 	const [currentQuestion, setCurrentQuestion] = React.useState({
 		question: "",
 		answer: "",
-		choices: [
-			"","","",""
-		]
+		choices: ["","","",""]
 	});
 	const [type, setType] = React.useState("review");
  	const [score, setScore] = React.useState(0);
@@ -22,14 +20,14 @@ export default function FlashCards(){
 	const navigate = useNavigate();
 
 	const styleSelectedCorrect = {
-		border: "4px solid #eee",
+		border: "8px solid #eee",
 		backgroundColor: "transparent"
 	}
 	const styleSelected = {
 		border: "2px solid #444",
 	}
 	const styleAnswer = {
-		border: "4px solid #eee",
+		border: "8px solid #eee",
 		backgroundColor: "transparent"
 	}
 
@@ -100,7 +98,7 @@ export default function FlashCards(){
 							<li key={index} onClick={() => handleAnswerClick(index)} style={styleSelectedCorrect}>
 								{choice}
 							</li>
-						: didAnswer && index === selectedAnswer ?
+						: 	didAnswer && index === selectedAnswer ?
 							<li key={index} onClick={() => handleAnswerClick(index)} style={styleSelected}>
 								{choice}
 							</li>

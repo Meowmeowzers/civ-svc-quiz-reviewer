@@ -24,8 +24,7 @@ export default function Home(){
 		conductEthics: false,
 		rights: false,
 		environment: false,
-		numberOfItems: 0,
-		type: "review"
+		numberOfItems: 0
 	});
 
 	const navigate = useNavigate();
@@ -39,11 +38,9 @@ export default function Home(){
 				[name]: type === "checkbox" ? checked: value
 			}			
 		});
-		console.log(quizTypes);
 	}
 
 	function startReview(){
-		setQuizTypes({...quizTypes, type: "review"})
 		setSelectedQuizItems(() => {			
 			const selectedItems = [
 				quizTypes.numericalType && dataNumerical,
@@ -76,18 +73,18 @@ export default function Home(){
 	return(
 		<div>
 			<div className="home-section">
-				{!isSetUp &&
+				{!isSetUp ?
 					<>
 						<div className="home-title"><p>My <span>CIVIL SERVICE</span></p>Exam Reviewer</div>
 						<div className="home-start-button" onClick={() => setIsSetUp(() => !isSetUp)}>Click Here</div>
 					</>
-				}
-				{isSetUp && 
+				:
 					<SetUp 
 						data={quizTypes}
 						handleChange={handleChange}
 						handleStartReview={startReview} 
-					/>}
+					/>
+				}
 			</div>
 
 			<div className="about-section">
@@ -173,6 +170,9 @@ export default function Home(){
 
 					<h1>Disclaimer</h1>
 					<li>Insert comment.</li>				
+
+					<h1>Sources</h1>
+					<li>------</li>
 				</div>
 			</div>
 			<footer></footer>

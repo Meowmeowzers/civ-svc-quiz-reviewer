@@ -63,7 +63,7 @@ export default function SetUp(props){
 								checked={props.data.conductEthics} 
 								onChange={props.handleChange} 
 							/>
-							Code of Conduct and Ethical Standards for Public Officials and Employees (R.A. 6713)
+							Code of Conduct and Ethical Standards (R.A. 6713)
 						</label>
 						<label>
 							<input 

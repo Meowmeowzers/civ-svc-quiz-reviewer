@@ -1,6 +1,7 @@
 import React from "react";
 import '../index.css';
 import { SelectedItemsContext } from "../App";
+import { useNavigate } from "react-router-dom";
 
 export default function FlashCards(){
 	
@@ -17,6 +18,8 @@ export default function FlashCards(){
 	const [currentIndex, setCurrentIndex] = React.useState(0);
 	const [didAnswer, setDidAnswer] = React.useState(false);
 	const [selectedAnswer, setSelectedAnswer] = React.useState(0);
+	
+	const navigate = useNavigate();
 
 	const styleSelectedCorrect = {
 		border: "4px solid #eee",
@@ -31,7 +34,10 @@ export default function FlashCards(){
 	}
 
 	React.useEffect(() => {
-		setCurrentQuestionData(flashCardsData[currentIndex].choices);
+		if(flashCardsData[currentIndex].choices)
+			setCurrentQuestionData(flashCardsData[currentIndex].choices);
+		else
+			navigate("/"); //when page refreshes flashcarddata is lost, so navigate back to home to prevent errors
 	}, []);
 
 	function setCurrentQuestionData(choicesArray){

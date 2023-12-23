@@ -84,7 +84,7 @@
   display:flex;
   flex-flow: column wrap;
   align-items: center;
-  background-color: hsl(135, 10%, 30%);
+  background-color: hsl(135, 10%, 20%);
   color: #eee;
   padding-bottom: 64px;
 }

@@ -13,7 +13,7 @@ export default function FlashCards(props){
 		]
 	});
 	const [score, setScore] = React.useState(0);
-	const [currentIndex, setIndexQuestion] = React.useState(0);
+	const [currentIndex, setCurrentIndex] = React.useState(0);
 	const [didAnswer, setDidAnswer] = React.useState(false);
 
 	useEffect(() => {
@@ -43,16 +43,18 @@ export default function FlashCards(props){
 
 	function handleAnswerClick(answeredIndex){
 		if(!didAnswer){
+			setDidAnswer(true);
+			
 			if(answeredIndex === currentQuestion.answer)
 				setScore(prev => prev + 1);
 			
-			setIndexQuestion(prev => {
+			setCurrentIndex(prev => {
 				if(prev + 1 >= flashCardsData.length)
 					return 0;
 				else
 					return prev + 1;
 			});
-			setDidAnswer(true);
+			
 		}
 	}
 
@@ -68,7 +70,7 @@ export default function FlashCards(props){
 			</div>
 			<div className="flash-card-main-content">
 				<div className="flash-card-question">
-					{flashCardsData[currentIndex].question}
+					{currentQuestion.question}
 				</div>
 				<ul className="choices">
 					<li onClick={() => handleAnswerClick(0)}>{currentQuestion.choices[0]}</li>

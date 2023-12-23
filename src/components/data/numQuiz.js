@@ -15,7 +15,7 @@ const numericalQuizData = [
 		question: "(15-8+3), 8, (4÷2×3), ____",
 		answer: "4",
 		choices: [
-			"4",
+			"6",
 			"3",
 			"8",
 			"2"

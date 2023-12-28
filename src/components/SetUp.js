@@ -47,43 +47,13 @@ export default function SetUp(props){
 						</label>
 						<label>
 							<input 
-								id="phConstitution"
-								name="phConstitution" 
+								id="general"
+								name="general" 
 								type="checkbox" 
-								checked={props.data.phConstitution} 
+								checked={props.data.general} 
 								onChange={props.handleChange} 
 							/>
-							The Philippine Constitution
-						</label>
-						<label>
-							<input 
-								id="conductEthics"
-								name="conductEthics" 
-								type="checkbox" 
-								checked={props.data.conductEthics} 
-								onChange={props.handleChange} 
-							/>
-							Code of Conduct and Ethical Standards (R.A. 6713)
-						</label>
-						<label>
-							<input 
-								id="rights"
-								name="rights" 
-								type="checkbox" 
-								checked={props.data.rights} 
-								onChange={props.handleChange} 
-							/>
-							Peace and Human Rights Issues and Concepts
-						</label>
-						<label>
-							<input 
-								id="environment"
-								name="environment" 
-								type="checkbox" 
-								checked={props.data.environment} 
-								onChange={props.handleChange} 
-							/>
-							Environment Management and Protection
+							General Information
 						</label>
 				</div>
 				<div className="setup-quiz-type">

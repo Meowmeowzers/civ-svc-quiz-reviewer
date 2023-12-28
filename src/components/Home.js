@@ -4,12 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { SelectedItemsContext } from "../App";
 import dataAnalytical from "./data/analyticalQuiz"
 import dataClerical from "./data/clericalQuiz"
-import dataConduct from "./data/conductQuiz"
-import dataConstitution from "./data/constQuiz"
-import dataEnvironment from "./data/envQuiz"
 import dataNumerical from "./data/numQuiz"
-import dataRights from "./data/rightsQuiz"
 import dataVerbal from "./data/verbalQuiz"
+import dataGeneral from "./data/genQuiz"
 
 export default function Home(){
 	
@@ -20,10 +17,7 @@ export default function Home(){
 		verbalType: false,
 		clericalType: false,
 		analyticalType: false,
-		phConstitution: false,
-		conductEthics: false,
-		rights: false,
-		environment: false,
+		general: false,
 		numberOfItems: 0
 	});
 
@@ -47,10 +41,7 @@ export default function Home(){
 				quizTypes.verbalType && dataVerbal,
 				quizTypes.clericalType && dataClerical,
 				quizTypes.analyticalType && dataAnalytical,
-				quizTypes.phConstitution && dataConstitution,
-				quizTypes.conductEthics && dataConduct,
-				quizTypes.rights && dataRights,
-				quizTypes.environment && dataEnvironment,
+				quizTypes.general && dataGeneral
 			  ].filter(Boolean).flat(); // flat is used to remove array nesting???
 
 			shuffleArray(selectedItems);

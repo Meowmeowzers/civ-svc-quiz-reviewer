@@ -1,26 +1,30 @@
-const rightsQuizData = [
+const generalQuizData = [
 	{
-		id: 17001,
+		id: 13001,
 		question: "question right",
+		image: "",
 		answer: "answer",
 		choices: [
 			"choice 1x",
 			"choice 2y",
 			"choice 3z",
 			"choice 4a"
-		]
+		],
+		guide: ""
 	},
 	{
-		id: 17002,
+		id: 13002,
 		question: "question right",
+		image: "",
 		answer: "answer",
 		choices: [
 			"choice 1x",
 			"choice 2y",
 			"choice 3z",
 			"choice 4a"
-		]
+		],
+		guide: ""
 	}
 ]
 
-export default rightsQuizData;
+export default generalQuizData;

@@ -1,25 +1,29 @@
 const analyticalQuizData = [
 	{
-		id: 11001,
+		id: 15001,
 		question: "question a",
+		image: "",
 		answer: "answer",
 		choices: [
 			"choice 1x",
 			"choice 2y",
 			"choice 3z",
 			"choice 4a"
-		]
+		],
+		guide: ""
 	},
 	{
-		id: 11002,
+		id: 15002,
 		question: "question a",
+		image: "",
 		answer: "answer",
 		choices: [
 			"choice 1x",
 			"choice 2y",
 			"choice 3z",
 			"choice 4a"
-		]
+		],
+		guide: ""
 	}
 ]
 

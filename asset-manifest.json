@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/civ-svc-quiz-reviewer/static/css/main.67849dbf.chunk.css",
-    "main.js": "/civ-svc-quiz-reviewer/static/js/main.463a5b14.chunk.js",
-    "main.js.map": "/civ-svc-quiz-reviewer/static/js/main.463a5b14.chunk.js.map",
-    "runtime-main.js": "/civ-svc-quiz-reviewer/static/js/runtime-main.52069f14.js",
-    "runtime-main.js.map": "/civ-svc-quiz-reviewer/static/js/runtime-main.52069f14.js.map",
-    "static/js/2.761f4138.chunk.js": "/civ-svc-quiz-reviewer/static/js/2.761f4138.chunk.js",
-    "static/js/2.761f4138.chunk.js.map": "/civ-svc-quiz-reviewer/static/js/2.761f4138.chunk.js.map",
-    "static/js/3.5f771c87.chunk.js": "/civ-svc-quiz-reviewer/static/js/3.5f771c87.chunk.js",
-    "static/js/3.5f771c87.chunk.js.map": "/civ-svc-quiz-reviewer/static/js/3.5f771c87.chunk.js.map",
-    "index.html": "/civ-svc-quiz-reviewer/index.html",
-    "precache-manifest.a6f0aa1bebfbb73caec31d3ab1fd822a.js": "/civ-svc-quiz-reviewer/precache-manifest.a6f0aa1bebfbb73caec31d3ab1fd822a.js",
-    "service-worker.js": "/civ-svc-quiz-reviewer/service-worker.js",
-    "static/css/main.67849dbf.chunk.css.map": "/civ-svc-quiz-reviewer/static/css/main.67849dbf.chunk.css.map",
-    "static/js/2.761f4138.chunk.js.LICENSE.txt": "/civ-svc-quiz-reviewer/static/js/2.761f4138.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.67849dbf.chunk.css",
+    "main.js": "/static/js/main.02745dcb.chunk.js",
+    "main.js.map": "/static/js/main.02745dcb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d929a158.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d929a158.js.map",
+    "static/js/2.761f4138.chunk.js": "/static/js/2.761f4138.chunk.js",
+    "static/js/2.761f4138.chunk.js.map": "/static/js/2.761f4138.chunk.js.map",
+    "static/js/3.5f771c87.chunk.js": "/static/js/3.5f771c87.chunk.js",
+    "static/js/3.5f771c87.chunk.js.map": "/static/js/3.5f771c87.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c0975694366ba335cc4fbc9f80b4648b.js": "/precache-manifest.c0975694366ba335cc4fbc9f80b4648b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.67849dbf.chunk.css.map": "/static/css/main.67849dbf.chunk.css.map",
+    "static/js/2.761f4138.chunk.js.LICENSE.txt": "/static/js/2.761f4138.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.52069f14.js",
+    "static/js/runtime-main.d929a158.js",
     "static/js/2.761f4138.chunk.js",
     "static/css/main.67849dbf.chunk.css",
-    "static/js/main.463a5b14.chunk.js"
+    "static/js/main.02745dcb.chunk.js"
   ]
 }

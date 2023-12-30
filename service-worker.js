@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/civ-svc-quiz-reviewer/precache-manifest.262cfc01d9d5137c65bcdeabfdcbb05f.js"
+  "/civ-svc-quiz-reviewer/precache-manifest.a6f0aa1bebfbb73caec31d3ab1fd822a.js"
 );
 
 self.addEventListener('message', (event) => {

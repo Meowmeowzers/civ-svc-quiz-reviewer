@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b18509d8bbb4cbe59eb6bc21045f996",
+    "revision": "996ca76ed45decaa0bc31003a9f4458a",
     "url": "/civ-svc-quiz-reviewer/index.html"
   },
   {
-    "revision": "888e2139059bd5f4d369",
+    "revision": "e4dc8e3e02d8f6af72e9",
     "url": "/civ-svc-quiz-reviewer/static/css/main.67849dbf.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/civ-svc-quiz-reviewer/static/js/3.5f771c87.chunk.js"
   },
   {
-    "revision": "888e2139059bd5f4d369",
-    "url": "/civ-svc-quiz-reviewer/static/js/main.ef52c4de.chunk.js"
+    "revision": "e4dc8e3e02d8f6af72e9",
+    "url": "/civ-svc-quiz-reviewer/static/js/main.463a5b14.chunk.js"
   },
   {
     "revision": "a02e4777a75fec496c6b",

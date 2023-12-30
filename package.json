@@ -1,5 +1,6 @@
 {
   "name": "civ-svc-quiz-reviewer",
+  "homepage": "https://Meowmeowzers.github.io/civ-svc-quiz-reviewer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
